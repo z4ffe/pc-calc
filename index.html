@@ -17,53 +17,61 @@
     <div class="manual">
         <ul>
             <li>Input hardware price in RUB</li>
-            <li>Press OK button for save price</li>
             <li>Click calculate for result</li>
             <li>Enjoy!</li>
         </ul>
     </div>
     <div class="forms">
         <form class="form form-1">
-            <input type="number" name="cpu" id="cpu" placeholder="CPU: " class="input">
-            <button type="submit" id="cpu-btn" class="button">OK</button>
+            <input type="number" id="cpu" placeholder="CPU: " class="input">
+            <button type="button" id="cpu-btn" class="button" onclick="calcResult()">Calc</button>
             <span class="dollar">₽</span>
         </form>
         <form class="form form-2">
-            <input type="number" name="CPU" id="mboard" placeholder="Mother board: " class="input">
-            <button type="submit" id="mboard-btn" class="button">OK</button>
+            <input type="number" id="mboard" placeholder="Mother board: " class="input">
+            <button type="button" id="mboard-btn" class="button" onclick="calcResult()">Calc</button>
             <span class="dollar">₽</span>
         </form>
         <form class="form form-3">
-            <input type="number" name="CPU" id="ram" placeholder="RAM: " class="input">
-            <button type="submit" id="ram-btn" class="button">OK</button>
+            <input type="number" id="ram" placeholder="RAM: " class="input">
+            <button type="button" id="ram-btn" class="button" onclick="calcResult()">Calc</button>
             <span class="dollar">₽</span>
         </form>
         <form class="form form-4">
-            <input type="number" name="CPU" id="ssd" placeholder="SSD: " class="input">
-            <button type="submit" id="ssd-btn" class="button">OK</button>
+            <input type="number" id="ssd" placeholder="SSD: " class="input">
+            <button type="button" id="ssd-btn" class="button" onclick="calcResult()">Calc</button>
             <span class="dollar">₽</span>
         </form>
         <form class="form form-5">
-            <input type="number" name="CPU" id="psu" placeholder="Power Supply: " class="input">
-            <button type="submit" id="psu-btn" class="button">OK</button>
+            <input type="number" id="psu" placeholder="Power Supply: " class="input">
+            <button type="button" id="psu-btn" class="button" onclick="calcResult()">Calc</button>
             <span class="dollar">₽</span>
         </form>
         <form class="form form-6">
             <input type="number" name="case" id="pcase" placeholder="Case: " class="input">
-            <button type="submit" id="case-btn" class="button">OK</button>
+            <button type="button" id="case-btn" class="button" onclick="calcResult()">Calc</button>
             <span class="dollar">₽</span>
         </form>
     </div>
     <div class="result">
-        <button type="submit" id="calc" class="result-btn" onclick="calcResult()">
-            Calculate
-        </button>
-        <h3 class="result-header">Result:</h3>
-        <ul>
-            <li id="resRUB">RUB</li>
-            <li id="resUSD">USD</li>
-            <li id="resEUR">EUR</li>
-        </ul>
+        <div class="btn-container">
+            <button type="submit" id="calc" class="result-btn" onclick="calcResult()">
+                Calculate
+            </button>
+        </div>
+        <div class="header-container">
+            <div class="result-header__cont">
+                <h3 class="result-header">Result:</h3>
+            </div>
+            <div class="result-cont">
+                <ul>
+                    <li id="resRUB">RUB</li>
+                    <li id="resUSD">USD</li>
+                    <li id="resEUR">EUR</li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 </div>
 <div class="line"></div>

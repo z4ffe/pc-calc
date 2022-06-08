@@ -8,6 +8,8 @@
 
 body {
   margin: 0;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .line {
@@ -15,7 +17,7 @@ body {
   margin: 30px auto;
   content: "";
   background: #97c8eb;
-  width: 90%;
+  width: 100%;
   height: 1.5px;
   border-radius: 1150px 50px 1150px 50px;
 }
@@ -36,12 +38,12 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 50px;
   margin-top: 30px;
-  margin-left: 40px;
 }
 .main .manual ul {
   font-size: 25px;
   margin-top: 30px;
   list-style-type: none;
+  padding: 0;
 }
 .main .manual ul li {
   padding-top: 10px;
@@ -54,12 +56,13 @@ body {
 .main .forms .input {
   border: none;
   background: #64e9ee;
-  color: white;
+  color: #001011;
   width: 250px;
   height: 30px;
   margin-top: 5px;
   padding-left: 5px;
   border-radius: 5px;
+  font-size: 20px;
 }
 .main .forms .input::placeholder {
   color: #001011;
@@ -80,7 +83,6 @@ body {
   transition: 0.2s;
 }
 .main .forms .dollar {
-  position: absolute;
   color: #001011;
   left: 792px;
   color: #001011;
@@ -91,37 +93,38 @@ body {
 .main .result {
   display: flex;
   flex-direction: column;
-  position: relative;
 }
-.main .result .result-header {
-  font-size: 35px;
-  z-index: 999;
-  background: none;
-  margin-left: 145px;
-}
-.main .result .result-btn {
+.main .result .btn-container {
+  display: block;
   align-self: end;
-  margin-right: 80px;
+}
+.main .result .btn-container .result-btn {
   border: none;
-  border: none;
-  color: #001011;
-  background: #3aafb9;
-  width: 150px;
-  height: 30px;
-  font-size: 20px;
+  font-size: 25px;
+  background-color: #64e9ee;
   border-radius: 5px;
+  width: 150px;
+  height: 35px;
+  color: #001011;
 }
-.main .result ul {
-  position: absolute;
-  left: 235px;
-  top: 30px;
-  list-style-type: none;
-  font-size: 30px;
-  background: none;
+.main .result .header-container {
+  display: block;
+  align-self: end;
 }
-.main .result ul li {
-  padding-top: 10px;
+.main .result .header-container .result-header__cont .result-header {
   text-align: right;
+  font-size: 25px;
+}
+.main .result .result-cont {
+  align-self: end;
+}
+.main .result .result-cont ul {
+  list-style-type: none;
+}
+.main .result .result-cont ul li {
+  padding: 0;
+  text-align: right;
+  font-size: 25px;
 }
 
 .footer {
@@ -142,8 +145,8 @@ body {
 .modal-box {
   display: flex;
   opacity: 0;
-  width: 500px;
-  height: 70px;
+  width: 350px;
+  height: 60px;
   background: #97c8eb;
   margin: auto auto;
   border-radius: 10px;

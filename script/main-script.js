@@ -10,6 +10,9 @@ function calcResult() {
     let resultEUR = resultRUB / 70;
     if (isNaN(resultRUB)) {
         document.getElementById('modal').style.opacity = 1;
+        setTimeout(() => {
+            document.getElementById('modal').style.opacity = 0;
+        }, "2000")
     } else {
         document.getElementById('modal').style.opacity = 0;
         document.getElementById('resRUB').innerHTML = resultRUB + ' ' + 'RUB'
@@ -17,3 +20,5 @@ function calcResult() {
         document.getElementById('resEUR').innerHTML = Math.round(resultEUR) + ' ' + 'EUR'
     }
 }
+
+
